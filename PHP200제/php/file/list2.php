@@ -1,0 +1,21 @@
+<?php
+    $root = $_SERVER["DOCUMENT_ROOT"];
+    include_once $root."/file/db.php";
+
+    $query = "slelect * from files order by num desc";
+    $result = mysqli_query($dbConnect, $query);
+
+    while($row = mysqli_fetch_array($result)) {
+        $data = "<li><img src='{$row['name']}'></li>"
+    }
+?>
+
+<style>
+    img{
+        width:100px;
+    }
+</style>
+
+<ul>
+    <?=$data?>
+</ul>
