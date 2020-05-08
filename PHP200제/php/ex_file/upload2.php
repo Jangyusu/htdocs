@@ -11,7 +11,6 @@
     <input type="file" name="upload[]">
     
     <input type="submit" value="업로드">
-    
 </form>
 
 
